@@ -1,2 +1,2 @@
-# my_projects
-This repository contains the different project on which I could work.
+#My projects
+This repository contains the different projects I've been able to work on
