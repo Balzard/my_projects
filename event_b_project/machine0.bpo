@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Blocs" org.eventb.core.type="ℙ(Blocs)"/>
+<org.eventb.core.poIdentifier name="Direction" org.eventb.core.type="ℙ(Direction)"/>
+<org.eventb.core.poIdentifier name="Trains" org.eventb.core.type="ℙ(Trains)"/>
+<org.eventb.core.poIdentifier name="etat_train" org.eventb.core.type="ℙ(etat_train)"/>
+<org.eventb.core.poIdentifier name="A" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="B" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="C" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="D" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="E" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="F" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="G" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GP1" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GP2" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GP3" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GP4" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GS1" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GS2" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GS3" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GS4" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GaresSecondaires" org.eventb.core.type="ℙ(Blocs)"/>
+<org.eventb.core.poIdentifier name="H" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="I" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="J" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="K" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="L" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="M" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="N" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="O" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="P" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="Q" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="R" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="S" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="T" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="bas" org.eventb.core.type="Direction"/>
+<org.eventb.core.poIdentifier name="en_GP" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="en_GS" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="etat_train_bas" org.eventb.core.type="ℙ(Blocs×etat_train)"/>
+<org.eventb.core.poIdentifier name="etat_train_haut" org.eventb.core.type="ℙ(Blocs×etat_train)"/>
+<org.eventb.core.poIdentifier name="haut" org.eventb.core.type="Direction"/>
+<org.eventb.core.poIdentifier name="ligne" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="path_bas" org.eventb.core.type="ℙ(Blocs×Blocs)"/>
+<org.eventb.core.poIdentifier name="path_haut" org.eventb.core.type="ℙ(Blocs×Blocs)"/>
+<org.eventb.core.poIdentifier name="rel_dir" org.eventb.core.type="ℙ(Direction×Direction)"/>
+<org.eventb.core.poIdentifier name="train1" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="train2" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="train3" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="train4" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="train5" org.eventb.core.type="Trains"/>
+<org.eventb.core.poPredicate name="GaresSecondairet" org.eventb.core.predicate="partition(Blocs,{A},{B},{C},{D},{E},{F},{G},{H},{I},{J},{K},{L},{M},{N},{O},{P},{Q},{R},{S},{T},{GS1},{GS2},{GS3},{GS4},{GP1},{GP2},{GP3},{GP4})" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#E"/>
+<org.eventb.core.poPredicate name="GaresSecondaireu" org.eventb.core.predicate="partition(Trains,{train1},{train2},{train3},{train4},{train5})" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#L"/>
+<org.eventb.core.poPredicate name="GaresSecondairev" org.eventb.core.predicate="path_haut={A ↦ D,B ↦ D,C ↦ D,D ↦ GS1,GS1 ↦ E,E ↦ G,E ↦ H,E ↦ F,F ↦ I,G ↦ I,H ↦ I,I ↦ GS2,GS2 ↦ J,J ↦ K,J ↦ L,J ↦ M,K ↦ N,L ↦ N,M ↦ N,N ↦ GS3,GS3 ↦ O,O ↦ P,O ↦ Q,O ↦ R,P ↦ S,Q ↦ S,R ↦ S,S ↦ GS4,GS4 ↦ T,T ↦ A,T ↦ B,T ↦ C}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#O"/>
+<org.eventb.core.poPredicate name="GaresSecondairew" org.eventb.core.predicate="path_bas={A ↦ T,B ↦ T,C ↦ T,T ↦ GS4,GS4 ↦ S,S ↦ P,S ↦ Q,S ↦ R,R ↦ O,S ↦ O,P ↦ O,O ↦ GS3,GS3 ↦ N,N ↦ K,N ↦ L,N ↦ M,K ↦ J,L ↦ J,M ↦ J,J ↦ GS2,GS2 ↦ I,I ↦ F,I ↦ G,I ↦ H,F ↦ E,G ↦ E,H ↦ E,E ↦ GS1,GS1 ↦ D,D ↦ A,D ↦ B,D ↦ C}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#P"/>
+<org.eventb.core.poPredicate name="GaresSecondairex" org.eventb.core.predicate="partition(Direction,{haut},{bas})" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#T"/>
+<org.eventb.core.poPredicate name="GaresSecondairey" org.eventb.core.predicate="partition(etat_train,{en_GP},{en_GS},{ligne})" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#^"/>
+<org.eventb.core.poPredicate name="GaresSecondairez" org.eventb.core.predicate="etat_train_bas={A ↦ ligne,B ↦ ligne,C ↦ ligne,T ↦ en_GS,GS4 ↦ ligne,S ↦ en_GP,P ↦ ligne,Q ↦ ligne,R ↦ ligne,O ↦ en_GS,GS3 ↦ ligne,N ↦ en_GP,M ↦ ligne,K ↦ ligne,L ↦ ligne,J ↦ en_GS,GS2 ↦ ligne,I ↦ en_GP,G ↦ ligne,F ↦ ligne,H ↦ ligne,E ↦ en_GS,GS1 ↦ ligne,D ↦ en_GP}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#a"/>
+<org.eventb.core.poPredicate name="GaresSecondaire{" org.eventb.core.predicate="etat_train_haut={A ↦ ligne,B ↦ ligne,C ↦ ligne,D ↦ en_GS,GS1 ↦ ligne,E ↦ en_GP,F ↦ ligne,G ↦ ligne,H ↦ ligne,I ↦ en_GS,GS2 ↦ ligne,J ↦ en_GP,M ↦ ligne,K ↦ ligne,L ↦ ligne,N ↦ en_GS,GS3 ↦ ligne,O ↦ en_GP,P ↦ ligne,Q ↦ ligne,R ↦ ligne,S ↦ en_GS,GS4 ↦ ligne,T ↦ en_GP}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#b"/>
+<org.eventb.core.poPredicate name="GaresSecondaire|" org.eventb.core.predicate="GaresSecondaires={GS1,GS2,GS3,GS4}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#d"/>
+<org.eventb.core.poPredicate name="GaresSecondaire}" org.eventb.core.predicate="rel_dir={haut ↦ bas,bas ↦ haut}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#f"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="direction" org.eventb.core.type="ℙ(Trains×Direction)"/>
+<org.eventb.core.poIdentifier name="etat" org.eventb.core.type="ℙ(Trains×etat_train)"/>
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{train1 ↦ A,train2 ↦ GS2,train3 ↦ M,train4 ↦ GS3,train5 ↦ P}∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{train1 ↦ haut,train2 ↦ haut,train3 ↦ bas,train4 ↦ haut,train5 ↦ bas}∈Trains → Direction" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{train1 ↦ en_GP,train2 ↦ en_GS,train3 ↦ en_GP,train4 ↦ en_GS,train5 ↦ en_GP}∈Trains → etat_train" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectioo" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="etat'" org.eventb.core.type="ℙ(Trains×etat_train)"/>
+<org.eventb.core.poIdentifier name="direction'" org.eventb.core.type="ℙ(Trains×Direction)"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectioo" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectioo" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="arriver_GP_haut/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(direction)∧direction∈Trains ⇸ Direction" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiop"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_haut/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_haut/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_haut/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#0"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_haut/grd8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train)=E∨(train∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train)=J∨(train∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train)=O∨(train∈dom(position)∧position∈Trains ⇸ Blocs))))))" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_haut/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectiop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{train ↦ destination}∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#arriver_GP_haut\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_haut/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectiop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="etat{train ↦ Etat}∈Trains → etat_train" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#arriver_GP_haut\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectiop" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="etat'" org.eventb.core.type="ℙ(Trains×etat_train)"/>
+<org.eventb.core.poIdentifier name="Etat" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="train" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiop)" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiop" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="direction(train)=haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="train∈Trains" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="destination∈ran(path_haut)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiop+" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(train)≠destination" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Etat∈ran(etat_train_haut)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiop," org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="position(train) ↦ Etat∈etat_train_haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiop-" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="position(train) ↦ destination∈path_haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectiop" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiop-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="position(train)=E∨position(train)=J∨position(train)=O∨position(train)=T" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#1"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="destination∉ran(position)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#\/|org.eventb.core.guard#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="arriver_GP_bas/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(direction)∧direction∈Trains ⇸ Direction" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectioq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_bas/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_bas/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_bas/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#0"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_bas/grd8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train)=D∨(train∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train)=I∨(train∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train)=N∨(train∈dom(position)∧position∈Trains ⇸ Blocs))))))" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_bas/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{train ↦ destination}∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#arriver_GP_bas\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arriver_GP_bas/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="etat{train ↦ Etat}∈Trains → etat_train" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#arriver_GP_bas\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectioq" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="etat'" org.eventb.core.type="ℙ(Trains×etat_train)"/>
+<org.eventb.core.poIdentifier name="Etat" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="train" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectioq)" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectioq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="direction(train)=bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="train∈Trains" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="destination∈ran(path_bas)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectioq+" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(train)≠destination" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Etat∈ran(etat_train_bas)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectioq," org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="position(train) ↦ Etat∈etat_train_bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectioq-" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="position(train) ↦ destination∈path_bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectioq" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectioq-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="position(train)=D∨position(train)=I∨position(train)=N∨position(train)=S" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#1"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="destination∉ran(position)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#0|org.eventb.core.guard#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="move_bas/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(direction)∧direction∈Trains ⇸ Direction" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectior"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_bas/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_bas/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_bas/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#0"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_bas/grd8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_bas/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{train ↦ destination}∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#move_bas\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_bas/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="etat{train ↦ Etat}∈Trains → etat_train" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#move_bas\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectior" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="etat'" org.eventb.core.type="ℙ(Trains×etat_train)"/>
+<org.eventb.core.poIdentifier name="Etat" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="train" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectior)" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectior" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="direction(train)=bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="train∈Trains" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="destination∈ran(path_bas)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectior+" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(train)≠destination" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Etat∈ran(etat_train_bas)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectior," org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="position(train) ↦ Etat∈etat_train_bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectior-" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="position(train) ↦ destination∈path_bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectior" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectior-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="position(train)≠D∧position(train)≠I∧position(train)≠N∧position(train)≠S" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#1|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="move_haut/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(direction)∧direction∈Trains ⇸ Direction" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectios"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_haut/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_haut/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#0"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_haut/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_haut/grd8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_haut/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{train ↦ destination}∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#move_haut\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="move_haut/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="etat{train ↦ Etat}∈Trains → etat_train" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#move_haut\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectios" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="etat'" org.eventb.core.type="ℙ(Trains×etat_train)"/>
+<org.eventb.core.poIdentifier name="Etat" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="train" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectios)" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectios" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="direction(train)=haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="train∈Trains" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="destination∈ran(path_haut)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectios+" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(train)≠destination" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Etat∈ran(etat_train_haut)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectios," org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="position(train) ↦ Etat∈etat_train_haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectios-" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="position(train) ↦ destination∈path_haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectios" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectios-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="position(train)≠E∧position(train)≠J∧position(train)≠O∧position(train)≠T" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#2|org.eventb.core.guard#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="urgence_bas/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_a∈dom(position)∧position∈Trains ⇸ Blocs∧train_b∈dom(position)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiot"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_bas/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiot'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_a∈dom(direction)∧direction∈Trains ⇸ Direction∧(direction(train_a)=haut⇒train_b∈dom(direction))" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiot'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_bas/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiot)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_a∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train_a)=D∨(train_a∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train_a)=I∨(train_a∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train_a)=N∨(train_a∈dom(position)∧position∈Trains ⇸ Blocs))))))" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiot)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_bas/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiot+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_b∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiot+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_bas/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{train_b ↦ provenance_b}∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#urgence_bas\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_bas/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="etat{train_b ↦ en_GS}∈Trains → etat_train" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#urgence_bas\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectiot" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="train_b" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="etat'" org.eventb.core.type="ℙ(Trains×etat_train)"/>
+<org.eventb.core.poIdentifier name="train_a" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="provenance_b" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiot'" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiot" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="position(train_a)=position(train_b)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiot)" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiot'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="direction(train_a)=haut∧direction(train_b)=bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="train_a∈Trains∧train_b∈Trains" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiot+" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiot)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(train_a)=D∨position(train_a)=I∨position(train_a)=N∨position(train_a)=S" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="provenance_b∈dom(path_bas)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectiot" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiot+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="provenance_b ↦ position(train_b)∈path_bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#3|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="aig_bas/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_b∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiou"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="aig_bas/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiou'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_a∈dom(position)∧position∈Trains ⇸ Blocs∧train_b∈dom(position)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiou'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="aig_bas/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiou("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_b∈dom(direction)∧direction∈Trains ⇸ Direction∧(direction(train_b)=haut⇒train_a∈dom(direction))" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiou("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="aig_bas/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiou+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_b∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiou+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="aig_bas/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{train_a ↦ provenance_b}∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#aig_bas\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectiou" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="train_b" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="train_a" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="provenance_b" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiou'" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiou" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="position(train_b)∈GaresSecondaires" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiou(" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiou'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(train_a) ↦ position(train_b)∈path_bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiou+" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiou(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="direction(train_b)=haut∧direction(train_a)=bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="train_a∈Trains∧train_b∈Trains∧train_a≠train_b" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="provenance_b∈dom(path_haut)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectiou" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiou+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="provenance_b ↦ position(train_b)∈path_haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#5|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="aig_haut/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_1∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="aig_haut/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_1∈dom(direction)∧direction∈Trains ⇸ Direction∧(direction(train_1)=bas⇒train_2∈dom(direction))" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="aig_haut/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_2∈dom(position)∧position∈Trains ⇸ Blocs∧train_1∈dom(position)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="aig_haut/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_1∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="aig_haut/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectiov"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{train_2 ↦ provenance_a}∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#aig_haut\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectiov" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="train_1" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="provenance_a" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="train_2" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiov'" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiov" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="train_1∈Trains∧train_2∈Trains∧train_1≠train_2" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiov(" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(train_1)∈GaresSecondaires" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiov)" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="direction(train_1)=bas∧direction(train_2)=haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiov+" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(train_2) ↦ position(train_1)∈path_haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="provenance_a∈dom(path_bas)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectiov" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiov+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="provenance_a ↦ position(train_1)∈path_bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#6|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="urgence_haut/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_a∈dom(position)∧position∈Trains ⇸ Blocs∧train_b∈dom(position)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiow"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_haut/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiow'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_a∈dom(direction)∧direction∈Trains ⇸ Direction∧(direction(train_a)=bas⇒train_b∈dom(direction))" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiow'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_haut/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiow)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_a∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train_a)=E∨(train_a∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train_a)=J∨(train_a∈dom(position)∧position∈Trains ⇸ Blocs∧(position(train_a)=O∨(train_a∈dom(position)∧position∈Trains ⇸ Blocs))))))" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiow)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_haut/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiow+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="train_b∈dom(position)∧position∈Trains ⇸ Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#0"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiow+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_haut/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectiow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{train_a ↦ provenance_a}∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#urgence_haut\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="urgence_haut/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPdirectiow"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="etat{train_a ↦ en_GP}∈Trains → etat_train" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#urgence_haut\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectiow" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="train_b" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="etat'" org.eventb.core.type="ℙ(Trains×etat_train)"/>
+<org.eventb.core.poIdentifier name="train_a" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="provenance_a" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Trains×Blocs)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiow'" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTdirectiow" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="position(train_a)=position(train_b)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiow)" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiow'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="direction(train_a)=bas∧direction(train_b)=haut" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="train_a∈Trains∧train_b∈Trains" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPdirectiow+" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiow)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(train_a)=E∨position(train_a)=J∨position(train_a)=O∨position(train_a)=T" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="provenance_a∈dom(path_bas)" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectiow" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPdirectiow+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="provenance_a ↦ position(train_b)∈path_bas" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#7|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ok/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="position∈Trains → Blocs" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="direction∈Trains → Direction" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="etat∈Trains → etat_train" org.eventb.core.source="/ok/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#."/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

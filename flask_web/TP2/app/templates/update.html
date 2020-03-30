@@ -1,0 +1,10 @@
+{% extends "parent.html" %}
+
+    {% block content %}
+    <h1>Ajouter un nouvel element</h1>
+    <form method="post" action="/{{ action }}">
+        <input type="text" id="element" value="" name="task">
+        <input type="submit" value="ajouter">
+    </form>
+    {% endblock %}
+

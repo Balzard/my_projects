@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="position ≔{train1 ↦ A, train2 ↦ GS2, train3 ↦ M, train4 ↦ GS3, train5 ↦ P} " org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="direction ≔ {train1 ↦ haut, train2 ↦ haut, train3 ↦ bas, train4 ↦ haut, train5 ↦ bas}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="etat ≔ {train1 ↦ en_GP, train2 ↦ en_GS, train3 ↦ en_GP, train4 ↦ en_GS, train5 ↦ en_GP}" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="position"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="position ∈ Trains → Blocs"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="context0"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="direction"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="direction ∈ Trains → Direction"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="etat"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="etat ∈ Trains → etat_train"/>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="arriver_GP_haut">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="train"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="Etat"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="direction(train) = haut"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="train ∈ Trains"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="destination ∈ ran(path_haut)"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="destination"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="position(train) ≠ destination"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="Etat ∈ ran(etat_train_haut)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="position(train) ↦ Etat ∈ etat_train_haut"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="position(train) ↦ destination ∈ path_haut"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd8" org.eventb.core.predicate="position(train)= E ∨ position(train)=J ∨ position(train)=O ∨ position(train)=T "/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd9" org.eventb.core.predicate="destination ∉ ran(position)"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="position(train) ≔ destination" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="etat(train) ≔ Etat" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="arriver_GP_bas">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="train"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="destination"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="Etat"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="direction(train) = bas"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="train ∈ Trains"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="destination ∈ ran(path_bas)"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="position(train) ≠ destination"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="Etat ∈ ran(etat_train_bas)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="position(train) ↦ Etat ∈ etat_train_bas"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="position(train) ↦ destination ∈ path_bas"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd8" org.eventb.core.predicate="position(train)= D ∨ position(train)=I ∨ position(train)=N ∨ position(train)=S "/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd9" org.eventb.core.predicate="destination ∉ ran(position)"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="position(train) ≔ destination" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="etat(train) ≔ Etat" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="move_bas">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="train"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="destination"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="Etat"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="direction(train) = bas"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="train ∈ Trains"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="destination ∈ ran(path_bas)"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="position(train) ≠ destination"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="Etat ∈ ran(etat_train_bas)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="position(train) ↦ Etat ∈ etat_train_bas"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="position(train) ↦ destination ∈ path_bas"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd8" org.eventb.core.predicate="position(train)≠ D ∧ position(train)≠I ∧ position(train)≠N ∧ position(train)≠S "/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="position(train) ≔ destination" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="etat(train) ≔ Etat" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="move_haut">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="train"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="destination"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="Etat"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="direction(train) = haut"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="position(train) ≔ destination" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="train ∈ Trains"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="destination ∈ ran(path_haut)"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="position(train) ≠ destination"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="Etat ∈ ran(etat_train_haut)"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="position(train) ↦ Etat ∈ etat_train_haut"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd7" org.eventb.core.predicate="position(train) ↦ destination ∈ path_haut"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd8" org.eventb.core.predicate="position(train)≠ E ∧ position(train)≠J ∧ position(train)≠O ∧ position(train)≠T "/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="etat(train) ≔ Etat" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="urgence_bas">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="train_a"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="train_b"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="position (train_a) = position(train_b) "/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="direction(train_a) = haut ∧ direction(train_b)=bas"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="train_a ∈ Trains ∧ train_b ∈ Trains"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="position(train_a)=D ∨ position(train_a)=I ∨ position(train_a)=N  ∨ position(train_a)= S  "/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="position(train_b) ≔ provenance_b" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="provenance_b"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="provenance_b ∈ dom(path_bas)"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="provenance_b ↦ position(train_b) ∈ path_bas"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="etat(train_b) ≔ en_GS" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="aig_bas">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="train_a"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="train_b"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="provenance_b"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="position(train_b) ∈ GaresSecondaires "/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="position(train_a) ↦ position(train_b) ∈ path_bas"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="direction(train_b) = haut ∧ direction(train_a) = bas"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="train_a ∈ Trains ∧ train_b ∈ Trains ∧ train_a ≠ train_b"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="provenance_b ∈ dom(path_haut)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="provenance_b ↦ position(train_b) ∈ path_haut"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="position(train_a) ≔ provenance_b" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="aig_haut">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="train_1"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="train_2"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="provenance_a"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="train_1 ∈ Trains ∧ train_2 ∈ Trains ∧ train_1 ≠ train_2"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="position(train_1) ∈ GaresSecondaires"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="direction(train_1) = bas ∧ direction(train_2) = haut"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="position(train_2) ↦ position(train_1) ∈ path_haut"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="provenance_a ∈ dom(path_bas)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="provenance_a ↦ position(train_1) ∈ path_bas"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="position(train_2) ≔ provenance_a" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="urgence_haut">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="train_a"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="train_b"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="provenance_a"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="position(train_a)= position(train_b)"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="position(train_a) ≔ provenance_a" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="direction(train_a) = bas ∧ direction(train_b)=haut"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="train_a ∈ Trains ∧ train_b ∈ Trains"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="position(train_a)=E ∨ position(train_a)=J ∨ position(train_a)=O  ∨ position(train_a)= T  "/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="provenance_a ∈ dom(path_bas)"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="provenance_a ↦ position(train_b) ∈ path_bas"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="etat(train_a) ≔ en_GP" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

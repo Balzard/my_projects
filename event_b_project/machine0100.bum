@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="machine010"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="context3"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="position"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="direction"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="etat"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="7" org.eventb.core.identifier="position_aig"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="9" org.eventb.core.identifier="etat_aigui"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="D" org.eventb.core.identifier="mouvement_train"/>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="etat_feux ≔ {feu_a ↦ rouge, feu_b ↦ vert, feu_c ↦ vert, feu_d ↦ vert, feu_e ↦ vert, feu_f ↦ vert, feu_g  ↦ vert, feu_h ↦ vert, feu_i ↦ vert, feu_j ↦ vert, feu_k ↦ vert, feu_l ↦ vert, feu_m ↦ rouge, feu_n ↦ vert, feu_o ↦ vert, feu_p ↦ rouge, feu_q ↦ vert, feu_r ↦ vert, feu_s ↦ vert, feu_t ↦ vert, feu_gs1 ↦ vert, feu_gs2 ↦ rouge, feu_gs3 ↦ rouge, feu_gs4 ↦ vert}" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="arriver_GP_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="arriver_GP_haut"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd12" org.eventb.core.predicate="destination ↦ feu_dest ∈ feux_voies"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="feu_dest"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="etat_feux(feu_dest) ≔ rouge " org.eventb.core.label="act4"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="feu_dep"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd13" org.eventb.core.predicate="position(train) ↦ feu_dep ∈ feux_voies"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd16" org.eventb.core.predicate="feu_dest ∈ feux"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd17" org.eventb.core.predicate="feu_dep ∈ feux"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd18" org.eventb.core.predicate="etat_feux(feu_dest) = vert"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="arriver_GP_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="arriver_GP_bas"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd13" org.eventb.core.predicate="destination ↦ feu_dest ∈ feux_voies"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd14" org.eventb.core.predicate="position(train) ↦ feu_dep ∈ feux_voies"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd12" org.eventb.core.predicate="feu_dep ∈ feux"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd15" org.eventb.core.predicate="feu_dest ∈ feux"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd16" org.eventb.core.predicate="etat_feux(feu_dest) = vert"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="etat_feux(feu_dest) ≔ rouge " org.eventb.core.label="act4"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="feu_dest"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="feu_dep"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_bas"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="feu_dest"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="feu_dep"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd11" org.eventb.core.predicate="feu_dest ∈ feux ∧ feu_dep ∈ feux"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd12" org.eventb.core.predicate="destination ↦ feu_dest ∈ feux_voies"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd13" org.eventb.core.predicate="position(train) ↦ feu_dep ∈ feux_voies"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="etat_feux(feu_dest) ≔ rouge " org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd15" org.eventb.core.predicate="destination ∈ GaresSecondaires ⇒ destination ∉ ran(position)"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd16" org.eventb.core.predicate="¬(∃x · x ∈ Trains ∧ x≠ train ∧ position(x)=destination ∧ direction(x) = direction(train))"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_haut"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="feu_dep"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="feu_dest"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd11" org.eventb.core.predicate="feu_dest ∈ feux ∧ feu_dep ∈ feux"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd12" org.eventb.core.predicate="destination ↦ feu_dest ∈ feux_voies"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd13" org.eventb.core.predicate="position(train) ↦ feu_dep ∈ feux_voies"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="etat_feux(feu_dest) ≔ rouge " org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd15" org.eventb.core.predicate="destination ∈ GaresSecondaires ⇒ destination ∉ ran(position)"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd16" org.eventb.core.predicate="¬(∃x · x ∈ Trains ∧ x≠ train ∧ position(x)=destination ∧ direction(x) = direction(train))"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="urgence_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="urgence_bas"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="etat_feux(feu_provenance_b) ≔ rouge" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="provenance_b ↦ feu_provenance_b ∈ feux_voies"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="feu_provenance_b"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd8" org.eventb.core.predicate="provenance_b ∉ ran(position) "/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="aig_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="aig_bas"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="feu_dest_a"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd10" org.eventb.core.predicate="feu_dest_a ∈ feux"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd11" org.eventb.core.predicate="provenance_b ↦ feu_dest_a ∈ feux_voies"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="etat_feux(feu_dest_a) ≔ rouge" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="aig_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="aig_haut"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="feu_dest_2"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd10" org.eventb.core.predicate="feu_dest_2 ∈ feux"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd11" org.eventb.core.predicate="provenance_a ↦ feu_dest_2 ∈ feux_voies"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="etat_feux(feu_dest_2) ≔ rouge" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="urgence_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="urgence_haut"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="feu_provenance_a"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="provenance_a ↦ feu_provenance_a ∈ feux_voies"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="etat_feux(feu_provenance_a) ≔ rouge" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd8" org.eventb.core.predicate="provenance_a ∉ ran(position) "/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="N" org.eventb.core.identifier="etat_feux"/>
+<org.eventb.core.invariant name="O" org.eventb.core.label="inv1" org.eventb.core.predicate="etat_feux ∈ feux → couleur_feux"/>
+<org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="feu_vert">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="feu"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="feu ∈ feux"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="feu ∈ dom(etat_feux)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="etat_feux(feu) = rouge"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="etat_feux(feu) ≔ vert" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="bloc_feu"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="bloc_feu ∈ Blocs"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="bloc_feu ↦ feu ∈ feux_voies"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="bloc_feu ∉ ran(position)"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

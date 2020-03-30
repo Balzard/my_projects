@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration page</title>
+</head>
+<body>
+
+{% with messages = get_flashed_messages( with_categories=true, category_filter=['danger'] ) %}
+{% if messages %}
+<ul class='flashes'>
+{% for c, m in messages %}
+<li> {{ c }} : {{ m }} </li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+{% if form.errors %}
+{% for message in form.username.errors %}
+<div class="field_error">{{ message }}</div>
+{% endfor %}
+{% endif %}
+
+<form action="/register" method="POST">
+ {{ form.hidden_tag() }} <!-- {{ form.csrf_token }} -->
+ <p>
+ {{ form.username.label }}<br>
+ {{ form.username(size=32) }}<br>
+ {% for error in form.username.errors %}
+ <span style="color: red;">[{{ error }}]</span>
+ {% endfor %}
+ </p>
+ <p>
+ {{ form.firstName.label }}<br>
+ {{ form.firstName(size=64) }}<br>
+ {% for error in form.firstName.errors %}
+ <span style="color: red;">[{{ error }}]</span>
+ {% endfor %}
+ </p>
+ <p>
+ {{ form.password.label }}<br>
+ {{ form.password(size=32) }}<br>
+ {% for error in form.password.errors %}
+ <span style="color: red;">[{{ error }}]</span>
+ {% endfor %}
+ </p>
+<p>
+ {{ form.confirm_password.label }}<br>
+ {{ form.confirm_password(size=32) }}<br>
+ {% for error in form.confirm_password.errors %}
+ <span style="color: red;">[{{ error }}]</span>
+ {% endfor %}
+ </p>
+ <p>
+ {{ form.lastName.label }}<br>
+ {{ form.lastName(size=32) }}<br>
+ {% for error in form.lastName.errors %}
+ <span style="color: red;">[{{ error }}]</span>
+ {% endfor %}
+ </p>
+
+ <p>
+ {{ form.birthDate.label }}<br>
+ {{ form.birthDate(size=32) }}<br>
+ {% for error in form.birthDate.errors %}
+ <span style="color: red;">[{{ error }}]</span>
+ {% endfor %}
+ </p>
+ <p>{{ form.submit() }}</p>
+ </form>
+
+</body>
+</html>

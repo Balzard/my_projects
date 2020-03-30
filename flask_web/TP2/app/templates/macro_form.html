@@ -1,0 +1,23 @@
+{% macro add_elements(task) %}
+<tr>
+    <td>{{ task.nom }}</td>
+    <td>
+        {% if task.etat== True %}
+               <form method="post" action="/state/{{ task.nom }}/{{ task.id }}">
+                    <input type="submit" value = "OPEN" class="btn btn-primary">
+               </form>
+        {% endif %}
+        {% if task.etat == False %}
+                <form method="post" action="/state/{{ task.nom }}/{{ task.id }}">
+                    <input type="submit" value = "CLOSE" class="btn btn-primary">
+               </form>
+        {% endif %}
+    </td>
+    <td><form method="post" action="/edit/{{ task.nom }}/{{ task.id }}" style="float: left">
+            <input value="Editer" type="submit" class="btn btn-warning">
+        </form>
+        <form method="get" action="/remove/{{ task.nom }}/{{ task.id }}">
+            <input value="Supprimer" type="submit" class="btn btn-danger">
+        </form> </td>
+  </tr>
+{% endmacro %}

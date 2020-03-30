@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="machine01"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="context2"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="position"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="direction"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="etat"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="7" org.eventb.core.identifier="position_aig"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="9" org.eventb.core.identifier="etat_aigui"/>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="mouvement_train ≔ {train1 ↦ arret, train2 ↦ arret, train3 ↦ arret, train4 ↦ arret, train5 ↦ arret}" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="arriver_GP_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="arriver_GP_haut"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="mouv"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd10" org.eventb.core.predicate="mouv ∈ ran(mouv_train)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd11" org.eventb.core.predicate="destination ↦ mouv ∈ mouv_train"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="mouvement_train(train) ≔ mouv" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="arriver_GP_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="arriver_GP_bas"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="mouv"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd10" org.eventb.core.predicate="mouv ∈ ran(mouv_train)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd11" org.eventb.core.predicate="destination ↦ mouv ∈ mouv_train"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="mouvement_train(train) ≔ mouv" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_bas"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="mouv"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd9" org.eventb.core.predicate="mouv ∈ ran(mouv_train)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd10" org.eventb.core.predicate="destination ↦ mouv ∈ mouv_train"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="mouvement_train(train) ≔ mouv" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_haut"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="mouv"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd9" org.eventb.core.predicate="mouv ∈ ran(mouv_train)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd10" org.eventb.core.predicate="destination ↦ mouv ∈ mouv_train"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="mouvement_train(train) ≔ mouv" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="urgence_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="urgence_bas"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="mouvement_train(train_b) ≔ arret" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="aig_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="aig_bas"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="mouv"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd8" org.eventb.core.predicate="mouv ∈ ran(mouv_train)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd9" org.eventb.core.predicate="provenance_b ↦ mouv ∈ mouv_train"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="mouvement_train(train_a)≔mouv" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="aig_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="aig_haut"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="mouv"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd8" org.eventb.core.predicate="mouv ∈ ran(mouv_train)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd9" org.eventb.core.predicate="provenance_a ↦ mouv ∈ mouv_train"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="mouvement_train(train_2)≔mouv" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="urgence_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="urgence_haut"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="mouvement_train(train_a)≔arret" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="D" org.eventb.core.identifier="mouvement_train"/>
+<org.eventb.core.invariant name="E" org.eventb.core.label="inv1" org.eventb.core.predicate="mouvement_train ∈ Trains → mouvement"/>
+</org.eventb.core.machineFile>

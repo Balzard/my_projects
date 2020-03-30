@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="machine0"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="context1"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="position"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="direction"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="etat"/>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="position_aig ≔ {aig1 ↦ GS1, aig2 ↦ GS2, aig3 ↦ GS3, aig4 ↦ GS4}" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="etat_aigui ≔{aig1 ↦ gauche, aig2 ↦ gauche, aig3 ↦ gauche, aig4 ↦ gauche}" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="arriver_GP_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="arriver_GP_haut"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="arriver_GP_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="arriver_GP_bas"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_bas"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_haut"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="urgence_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="urgence_bas"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="aig_bas">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="aig_bas"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="etat_aigui(aigui) ≔ droite " org.eventb.core.label="act2"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="aigui"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd7" org.eventb.core.predicate="aigui ↦ position(train_b) ∈ position_aig"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="aig_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="aig_haut"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="etat_aigui(aigui) ≔ gauche" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="aigui ↦ position(train_1) ∈ position_aig"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="aigui"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="urgence_haut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="urgence_haut"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="7" org.eventb.core.identifier="position_aig"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="inv1" org.eventb.core.predicate="position_aig ∈ aiguillages → GaresSecondaires"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="9" org.eventb.core.identifier="etat_aigui"/>
+<org.eventb.core.invariant name=":" org.eventb.core.label="inv2" org.eventb.core.predicate="etat_aigui ∈ aiguillages → pos_aigui"/>
+</org.eventb.core.machineFile>

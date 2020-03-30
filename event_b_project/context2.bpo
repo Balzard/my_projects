@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Blocs" org.eventb.core.type="ℙ(Blocs)"/>
+<org.eventb.core.poIdentifier name="Direction" org.eventb.core.type="ℙ(Direction)"/>
+<org.eventb.core.poIdentifier name="Trains" org.eventb.core.type="ℙ(Trains)"/>
+<org.eventb.core.poIdentifier name="etat_train" org.eventb.core.type="ℙ(etat_train)"/>
+<org.eventb.core.poIdentifier name="A" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="B" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="C" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="D" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="E" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="F" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="G" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GP1" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GP2" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GP3" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GP4" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GS1" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GS2" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GS3" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GS4" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="GaresSecondaires" org.eventb.core.type="ℙ(Blocs)"/>
+<org.eventb.core.poIdentifier name="H" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="I" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="J" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="K" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="L" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="M" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="N" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="O" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="P" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="Q" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="R" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="S" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="T" org.eventb.core.type="Blocs"/>
+<org.eventb.core.poIdentifier name="bas" org.eventb.core.type="Direction"/>
+<org.eventb.core.poIdentifier name="en_GP" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="en_GS" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="etat_train_bas" org.eventb.core.type="ℙ(Blocs×etat_train)"/>
+<org.eventb.core.poIdentifier name="etat_train_haut" org.eventb.core.type="ℙ(Blocs×etat_train)"/>
+<org.eventb.core.poIdentifier name="haut" org.eventb.core.type="Direction"/>
+<org.eventb.core.poIdentifier name="ligne" org.eventb.core.type="etat_train"/>
+<org.eventb.core.poIdentifier name="path_bas" org.eventb.core.type="ℙ(Blocs×Blocs)"/>
+<org.eventb.core.poIdentifier name="path_haut" org.eventb.core.type="ℙ(Blocs×Blocs)"/>
+<org.eventb.core.poIdentifier name="rel_dir" org.eventb.core.type="ℙ(Direction×Direction)"/>
+<org.eventb.core.poIdentifier name="train1" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="train2" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="train3" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="train4" org.eventb.core.type="Trains"/>
+<org.eventb.core.poIdentifier name="train5" org.eventb.core.type="Trains"/>
+<org.eventb.core.poPredicate name="GaresSecondairet" org.eventb.core.predicate="partition(Blocs,{A},{B},{C},{D},{E},{F},{G},{H},{I},{J},{K},{L},{M},{N},{O},{P},{Q},{R},{S},{T},{GS1},{GS2},{GS3},{GS4},{GP1},{GP2},{GP3},{GP4})" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#E"/>
+<org.eventb.core.poPredicate name="GaresSecondaireu" org.eventb.core.predicate="partition(Trains,{train1},{train2},{train3},{train4},{train5})" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#L"/>
+<org.eventb.core.poPredicate name="GaresSecondairev" org.eventb.core.predicate="path_haut={A ↦ D,B ↦ D,C ↦ D,D ↦ GS1,GS1 ↦ E,E ↦ G,E ↦ H,E ↦ F,F ↦ I,G ↦ I,H ↦ I,I ↦ GS2,GS2 ↦ J,J ↦ K,J ↦ L,J ↦ M,K ↦ N,L ↦ N,M ↦ N,N ↦ GS3,GS3 ↦ O,O ↦ P,O ↦ Q,O ↦ R,P ↦ S,Q ↦ S,R ↦ S,S ↦ GS4,GS4 ↦ T,T ↦ A,T ↦ B,T ↦ C}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#O"/>
+<org.eventb.core.poPredicate name="GaresSecondairew" org.eventb.core.predicate="path_bas={A ↦ T,B ↦ T,C ↦ T,T ↦ GS4,GS4 ↦ S,S ↦ P,S ↦ Q,S ↦ R,R ↦ O,S ↦ O,P ↦ O,O ↦ GS3,GS3 ↦ N,N ↦ K,N ↦ L,N ↦ M,K ↦ J,L ↦ J,M ↦ J,J ↦ GS2,GS2 ↦ I,I ↦ F,I ↦ G,I ↦ H,F ↦ E,G ↦ E,H ↦ E,E ↦ GS1,GS1 ↦ D,D ↦ A,D ↦ B,D ↦ C}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#P"/>
+<org.eventb.core.poPredicate name="GaresSecondairex" org.eventb.core.predicate="partition(Direction,{haut},{bas})" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#T"/>
+<org.eventb.core.poPredicate name="GaresSecondairey" org.eventb.core.predicate="partition(etat_train,{en_GP},{en_GS},{ligne})" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#^"/>
+<org.eventb.core.poPredicate name="GaresSecondairez" org.eventb.core.predicate="etat_train_bas={A ↦ ligne,B ↦ ligne,C ↦ ligne,T ↦ en_GS,GS4 ↦ ligne,S ↦ en_GP,P ↦ ligne,Q ↦ ligne,R ↦ ligne,O ↦ en_GS,GS3 ↦ ligne,N ↦ en_GP,M ↦ ligne,K ↦ ligne,L ↦ ligne,J ↦ en_GS,GS2 ↦ ligne,I ↦ en_GP,G ↦ ligne,F ↦ ligne,H ↦ ligne,E ↦ en_GS,GS1 ↦ ligne,D ↦ en_GP}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#a"/>
+<org.eventb.core.poPredicate name="GaresSecondaire{" org.eventb.core.predicate="etat_train_haut={A ↦ ligne,B ↦ ligne,C ↦ ligne,D ↦ en_GS,GS1 ↦ ligne,E ↦ en_GP,F ↦ ligne,G ↦ ligne,H ↦ ligne,I ↦ en_GS,GS2 ↦ ligne,J ↦ en_GP,M ↦ ligne,K ↦ ligne,L ↦ ligne,N ↦ en_GS,GS3 ↦ ligne,O ↦ en_GP,P ↦ ligne,Q ↦ ligne,R ↦ ligne,S ↦ en_GS,GS4 ↦ ligne,T ↦ en_GP}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#b"/>
+<org.eventb.core.poPredicate name="GaresSecondaire|" org.eventb.core.predicate="GaresSecondaires={GS1,GS2,GS3,GS4}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#d"/>
+<org.eventb.core.poPredicate name="GaresSecondaire}" org.eventb.core.predicate="rel_dir={haut ↦ bas,bas ↦ haut}" org.eventb.core.source="/ok/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#f"/>
+<org.eventb.core.poIdentifier name="aiguillages" org.eventb.core.type="ℙ(aiguillages)"/>
+<org.eventb.core.poIdentifier name="pos_aigui" org.eventb.core.type="ℙ(pos_aigui)"/>
+<org.eventb.core.poIdentifier name="aig1" org.eventb.core.type="aiguillages"/>
+<org.eventb.core.poIdentifier name="aig2" org.eventb.core.type="aiguillages"/>
+<org.eventb.core.poIdentifier name="aig3" org.eventb.core.type="aiguillages"/>
+<org.eventb.core.poIdentifier name="aig4" org.eventb.core.type="aiguillages"/>
+<org.eventb.core.poIdentifier name="droite" org.eventb.core.type="pos_aigui"/>
+<org.eventb.core.poIdentifier name="gauche" org.eventb.core.type="pos_aigui"/>
+<org.eventb.core.poPredicate name="GaresSecondaire~" org.eventb.core.predicate="partition(pos_aigui,{droite},{gauche})" org.eventb.core.source="/ok/context1.buc|org.eventb.core.contextFile#context1|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="GaresSecondairf'" org.eventb.core.predicate="partition(aiguillages,{aig1},{aig2},{aig3},{aig4})" org.eventb.core.source="/ok/context1.buc|org.eventb.core.contextFile#context1|org.eventb.core.axiom#1"/>
+<org.eventb.core.poIdentifier name="mouvement" org.eventb.core.type="ℙ(mouvement)"/>
+<org.eventb.core.poIdentifier name="arret" org.eventb.core.type="mouvement"/>
+<org.eventb.core.poIdentifier name="bouge" org.eventb.core.type="mouvement"/>
+<org.eventb.core.poIdentifier name="mouv_train" org.eventb.core.type="ℙ(Blocs×mouvement)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ok/context2.bpo|org.eventb.core.poFile#context2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(mouvement,{bouge},{arret})" org.eventb.core.source="/ok/context2.buc|org.eventb.core.contextFile#context2|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="mouv_train={A ↦ arret,B ↦ arret,C ↦ arret,D ↦ bouge,GS1 ↦ arret,E ↦ bouge,F ↦ arret,G ↦ arret,H ↦ arret,I ↦ bouge,GS2 ↦ arret,J ↦ bouge,K ↦ arret,L ↦ arret,M ↦ arret,N ↦ bouge,GS3 ↦ arret,O ↦ bouge,P ↦ arret,Q ↦ arret,R ↦ arret,S ↦ bouge,GS4 ↦ arret,T ↦ bouge}" org.eventb.core.source="/ok/context2.buc|org.eventb.core.contextFile#context2|org.eventb.core.axiom#-"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

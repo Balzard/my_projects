@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="context1"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="mouvement"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=")" org.eventb.core.identifier="bouge"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="arret"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(mouvement, {bouge}, {arret})"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="mouv_train"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm2" org.eventb.core.predicate="mouv_train ={A ↦ arret, B ↦ arret, C ↦ arret, D ↦ bouge, GS1 ↦ arret, E ↦ bouge, F ↦ arret, G ↦ arret, H ↦ arret, I ↦ bouge, GS2↦ arret, J ↦ bouge, K ↦ arret, L ↦ arret, M ↦ arret, N ↦ bouge, GS3 ↦ arret, O ↦ bouge, P ↦ arret, Q ↦ arret, R ↦ arret, S ↦ bouge, GS4 ↦ arret, T ↦ bouge} "/>
+</org.eventb.core.contextFile>

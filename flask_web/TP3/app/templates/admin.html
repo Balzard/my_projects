@@ -1,0 +1,18 @@
+{% extends "parent.html" %}
+{% import 'macro_form.html' as macros %}
+    {%  block content %}
+        <h1>Users</h1>
+    <table width="100%" border="collapse">
+    <tr>
+        <th>Username</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Admin</th>
+        <th>Blocked</th>
+    </tr>
+    {% for user in users.values() %}
+        {{ macros.list_users(user) }}
+    {% endfor %}
+    </table>
+
+    {% endblock %}
