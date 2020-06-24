@@ -1,0 +1,40 @@
+{% extends "parent.html" %}
+{% import "macro_form.html" as macros %}
+
+{% block content %}
+    <script src="/static/js/goldcarnet.js" type="text/javascript"></script>
+
+<div class="content" style="margin-top: 100px;">
+	<h1>Carnet d'or</h1>
+
+	<input type="text" placeholder="select an author" id="searchInput">
+	<button type="button" id="search" class="btn btn-secondary">search</button>
+	<button type="button" id="all" class="btn btn-secondary">all</button>
+
+	<h3 id="allComm">All comments</h3>
+
+	<table width="100%" border="collapse" class="table" id="commentTable">
+		<thead class="thead-light" id="table_carnet">
+		    <tr>
+		        <th>Auteur</th>
+		        <th>Date</th>
+		        <th>Message</th>
+		    </tr>
+				{% if comms %}
+					{% for comm in comms %}
+						{{macros.showComm(comm)}}
+					{% endfor %}
+				{% else %}
+					<tr>
+						<td>No comms available.</td>
+					</tr>
+				{% endif %}
+		</thead>
+	</table>
+
+	<a href="/comment" class="btn btn-primary">Add a comment</a>
+</div>
+
+
+
+{% endblock %}

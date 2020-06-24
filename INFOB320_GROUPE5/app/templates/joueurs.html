@@ -1,0 +1,34 @@
+{% extends "parent.html" %}
+{% import "macro_form.html" as macros %}
+
+{% block content %}
+<script type="text/javascript" src="/static/js/joueurs.js">
+</script>
+
+<div class="content" style="margin-top: 100px;">
+
+  {% with messages = get_flashed_messages(with_categories=true, category_filter="info")%}
+    {% if messages %}
+      <ul class="flashes">
+        {% for c, m in messages %}
+          <li class="flash_message" style="color: Red;">{{c}} : {{m}}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <h1>Liste de force du club</h1>
+  <table class="table" id="playerTable">
+    <tr class="thead-light">
+      <th>Pseudo</th>
+      <th>Catégorie</th>
+      {% if current_user.isAdmin() %}
+        <th>Option</th>
+      {% endif %}
+    </tr>
+    {% for player in players %}
+      {{macros.showPlayer(player, current_user)}}
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

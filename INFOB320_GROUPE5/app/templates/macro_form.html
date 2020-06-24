@@ -1,0 +1,95 @@
+{% macro showPlayer(player, current_user) %}
+  <tr>
+    <td>{{ player.pseudo }}</td>
+    <td id="status{{player.getId()}}">
+      {% if player.isAdmin()%}
+        ADMIN
+      {% else %}
+        MEMBRE
+      {% endif %}
+    </td>
+    {% if current_user.isAdmin() %}
+      <td>
+        <a class="deleteBtn btn btn-danger" href="/deletePlayer/id={{player.getId()}}" onclick="return confirm('delete {{player.getUsername()}} ?')">Delete</a>
+        <a href="#status" class="status btn btn-success" id="status{{player.getId()}}" onclick="return confirm('change {{player.getUsername()}} status ?')">Change Status</a>
+      </td>
+    {% endif %}
+  </tr>
+{% endmacro %}
+
+
+{% macro showTeam(team, current_user)%}
+  <tr>
+    <td>{{team.getName()}}</td>
+    <td>
+      <button type="button" class="teamView btn btn-success" id="{{team.getName()}}">View players</button>
+      {% if current_user.isAdmin()%}
+        <a href="/deleteTeam/nom={{team.getName()}}" class="deleteBtn btn btn-danger" onclick="return confirm('delete {{team.getName()}} ?')">Delete</a>
+        <a href="/editTeam/nom={{team.getName()}}" class="btn btn-primary">Edit</a>
+          <a class="btn btn-info" href="addPlayerToTeam/nom={{ team.getName() }}">Add player</a>
+
+      {% endif %}
+    </td>
+  </tr>
+{% endmacro %}
+
+{% macro showComm(comm) %}
+  <tr>
+    <td>{{comm.getAuthor()}}</td>
+    <td>{{comm.getDate()}}</td>
+    <td>{{comm.getMessage()}}</td>
+  </tr>
+{% endmacro %}
+
+{% macro showProd(prod)%}
+  <tr>
+    <td>{{prod.getName()}}</td>
+    <td>{{prod.getType()}}</td>
+    <td>{{prod.getPrice()}}</td>
+  </tr>
+{% endmacro%}
+
+{% macro showStock(prod)%}
+  <tr id="prod{{prod.getId()}}">
+    <td>{{prod.getName()}}</td>
+    <td>{{prod.getType()}}</td>
+    <td id="quant{{prod.getId()}}">{{prod.getQuant()}}</td>
+    <td>
+      <a href="/deleteProd/id={{prod.getId()}}" onclick="return confirm('delete the product {{prod.getName()}} ?')" class="btn btn-danger">Delete</a>
+      <a href="/editProduct/id={{prod.getId()}}" class="btn btn-primary">Edit</a>
+      <a href="#+" class="add btn btn-secondary" id="add{{prod.getId()}}">+</a>
+      <a href="#-" class="minus btn btn-secondary" id="minus{{prod.getId()}}">-</a>
+    </td>
+  </tr>
+{% endmacro%}
+
+{% macro showMat(mat, current_user) %}
+  <tr>
+    <td>{{mat.getType()}}</td>
+    <td id="quant{{mat.getId()}}">{{mat.getQuant()}}</td>
+    {% if current_user.is_authenticated and current_user.isAdmin() %}
+      <td>
+        <a class="deleteBtn btn btn-danger" href="/deleteMatos/id={{mat.getId()}}" onclick="return confirm('delete {{mat.getType()}} ?')">Delete</a>
+        <a href="#+" class="add btn btn-secondary" id="add{{mat.getId()}}">+</a>
+        <a href="#-" class="minus btn btn-secondary" id="minus{{mat.getId()}}">-</a>
+      </td>
+    {% endif %}
+  </tr>
+{% endmacro%}
+
+{% macro showTraining(training) %}
+  <tr>
+    <td>{{training.getDay()}}</td>
+    <td>{{training.getHour()}}</td>
+    <td>{{training.getType()}}</td>
+  </tr>
+{% endmacro %}
+
+{% macro showMatch(match) %}
+  <tr>
+    <td>{{match.getDate()}}</td>
+    <td>{{match.getTeam()}}</td>
+    <td>{{match.getRival()}}</td>
+    <td>{{match.getScore()}}</td>
+  </tr>
+{% endmacro %}

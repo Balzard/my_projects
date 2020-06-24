@@ -1,0 +1,29 @@
+{% extends "parent.html" %}
+{% import "macro_form.html" as macros%}
+
+{% block content %}
+
+  <script type="text/javascript" src="/static/js/bar.js"></script>
+
+  <div style="margin-top: 100px;">
+    <h1>Produits disponibles au bar</h1>
+    <h3>Tous les produits.</h3>
+    <input type="text" placeholder="select a type" id="searchInput">
+  	<button type="button" id="search" class="btn btn-secondary"> search</button>
+  	<button type="button" id="all" class="btn btn-secondary">all</button><br><br>
+
+    <table width="100%" border="collapse" class="table" id="barTable">
+      <tr class="thead-light">
+        <th>Produit</th>
+        <th>Type</th>
+        <th>Prix</th>
+      </tr>
+      {% for prod in products %}
+        {{macros.showProd(prod)}}
+      {% endfor %}
+    </table>
+    {% if current_user.is_authenticated and current_user.isAdmin()%}
+      <a href="/stock" class="btn btn-primary">Voir les stocks</a>
+    {% endif%}
+  </div>
+{% endblock %}

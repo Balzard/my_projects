@@ -1,0 +1,20 @@
+{% extends "parent.html" %}
+
+{% block content%}
+  <div style="margin-top: 150px; text-align: center;">
+    <h1 style="text-align: center;">Write a comment</h1>
+    <h3 style="text-align: center;">Your comment will be remind as {{pseudo}}.</h3>
+
+    <form novalidate action="/comment" method="post" style="text-align: center;">
+      {{form.csrf_token}}
+
+      {{form.comm.label}}<br>
+
+      {{form.comm}}<br><br>
+
+      {{form.submit(class="btn btn-primary", rows=3)}}
+    </form>
+
+    <a href="/goldCarnet" class="btn btn-danger" style="margin-top:10px; ">Cancel</a>
+  </div>
+{% endblock%}

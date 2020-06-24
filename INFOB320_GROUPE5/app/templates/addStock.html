@@ -1,0 +1,56 @@
+{% extends "parent.html"%}
+
+{% block content%}
+  <div style="margin-top :150px; text-align: center;">
+    <h1>Add a product for the bar</h1>
+      {% with messages = get_flashed_messages(with_categories=true, category_filter="info")%}
+    {% if messages %}
+      <ul class="flashes">
+        {% for c, m in messages %}
+          <p class="flash_message" style="color: Red;">{{c}} : {{m}}</p>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+    <form novalidate style="text-align: center;" action="/addStock" method="POST">
+      {{form.csrf_token}}
+
+      <ul class="field_error">
+         {% for message in form.name.errors %}
+           <p>{{message}}</p>
+         {% endfor %}
+       </ul>
+      {{form.name.label}}<br>
+      {{form.name}}<br>
+
+      <ul class="field_error">
+         {% for message in form.quantite.errors %}
+           <p>{{message}}</p>
+         {% endfor %}
+       </ul>
+      {{form.quantite.label}}<br>
+      {{form.quantite}}<br>
+
+      <ul class="field_error">
+         {% for message in form.type.errors %}
+           <p>{{message}}</p>
+         {% endfor %}
+       </ul>
+      {{form.type.label}}<br>
+      {{form.type (class="form-control-lg")}}<br>
+
+      <ul class="field_error">
+         {% for message in form.tarif.errors %}
+           <p>{{message}}</p>
+         {% endfor %}
+       </ul>
+      {{form.tarif.label}}<br>
+      {{form.tarif}}<br><br>
+
+      {{form.submit (class="btn btn-primary")}}
+    </form>
+
+    <a href="/stock" class="btn btn-danger" style="margin-top: 10px;">Cancel</a>
+
+  </div>
+{% endblock%}

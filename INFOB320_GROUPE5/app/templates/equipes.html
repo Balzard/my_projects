@@ -1,0 +1,53 @@
+{% extends "parent.html" %}
+{% import "macro_form.html" as macros%}
+
+{% block content %}
+  <script type="text/javascript" src="/static/js/equipes.js">
+  </script>
+
+  <div class="content" style="margin-top: 100px;">
+    <h1>Teams page</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true, category_filter="info")%}
+      {% if messages %}
+        <ul class="flashes">
+          {% for c, m in messages %}
+            <li class="flash_message" style="color: Red;">{{c}} : {{m}}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <h3>Teams</h3>
+    <table border="collapse" class="table" id="teams">
+      <tr class="thead-light">
+        <th>Name</th>
+        <th>Options</th>
+      </tr>
+        {% for team in teams %}
+          {{macros.showTeam(team, current_user)}}
+        {% endfor %}
+        {% if not teams %}
+        <tr>
+          <td>No team left.</td>
+        </tr>
+        {% endif %}
+    </table>
+    {% if current_user.admin %}
+    <a href="/addTeam" class="btn btn-primary" style="margin-bottom: 20px;">Add a team</a><br>
+    {% endif %}
+
+    <h3 id="teamName">Players</h3>
+    <table class="table" id="playersTable" border="collapse">
+      <tr class="thead-light">
+        <th>Pseudo</th>
+        {% if current_user.isAdmin() %}
+          <th>Option</th>
+        {% endif %}
+      </tr>
+      <tr>
+        <td>Please select a team.</td>
+      </tr>
+    </table>
+  </div>
+{% endblock %}

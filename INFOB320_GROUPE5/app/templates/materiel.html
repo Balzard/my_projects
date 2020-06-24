@@ -1,0 +1,32 @@
+{% extends "parent.html" %}
+{% import "macro_form.html" as macros %}
+
+{% block content %}
+
+<script type="text/javascript" src="/static/js/materiel.js">
+</script>
+
+<div class="content" style="margin-top: 100px;">
+  <h1>Matériel disponible</h1>
+
+  <table class="table" border="collapse">
+    <thead class="thead-light" id="matosTable">
+      <tr>
+        <th>Type</th>
+        <th>Quantité</th>
+        {% if current_user.is_authenticated and current_user.isAdmin()%}
+          <th>Option</th>
+        {% endif %}
+      </tr>
+      {% for mat in matos %}
+        {{macros.showMat(mat, current_user)}}
+      {% endfor %}
+    </thead>
+  </table>
+  {% if current_user.is_authenticated and current_user.isAdmin() %}
+    <a href="/addMatos" class="btn btn-primary">Ajouter un matériel</a>
+  {% endif %}
+
+</div>
+
+{% endblock %}
